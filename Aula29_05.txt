@@ -1,0 +1,9 @@
+Exercício 1: No script de criação da base de dados, os DROP TABLE devem ser executados na ORDEM INVERSA de criação das tabelas. 
+Por que?
+
+Porque não é permitido fazer o drop de uma tabela referenciada por outras tabelas, e uma tabela apenas pode ser referenciada por
+tabelas criadas após ela na sequência do código.
+
+
+
+
