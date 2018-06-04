@@ -1,0 +1,90 @@
+If condition1 then commands1
+[Elseif condition2 commands2]
+...
+[Else commandsn]
+End if;
+
+--
+
+Case 
+When condition1 (attribute relational_op value1)
+When condition2 then value2
+Else valuen
+End;
+
+--
+
+FOR I in 1..MAX LOOP (a variável I não precisa ser declarada nem incrementada)
+commands
+END LOOP;
+
+--
+
+FOR I in reverse MAX..1 LOOP
+commands
+END LOOP;
+
+--
+
+WHILE condition LOOP 
+commands (as variáveis que controlam a condição devem ser explicitamente declaradas e incrementadas)
+END LOOP;
+
+--
+
+LOOP
+commands (as variáveis que controlam a condição devem ser explicitamente declaradas e incrementadas)
+EXIT WHEN condition;
+END LOOP;
+
+--
+
+FORALL j in 1..MAX
+command
+
+--
+
+[DECLARE ...] (variáveis, constantes, cursores)
+BEGIN ... (comandos SQL e estruturas de programação)
+[EXCEPTION ...] (identificação de erros e emissão de mensagens)
+END;
+
+--
+
+Procedure: Pode receber parâmetros de entrada ou de saída. Ativado como se fosse um comando da linguagem.
+Function: Pode receber parâmetros apenas de entrada e, necessariamente, retorna um valor em seu nome. A ativação ocorre 
+em expressões.
+Trigger: Rotina disparada automaticamente antes ou depois de comandos update, insert ou delete. 
+
+--
+
+PROCEDURE
+
+CREATE [OR REPLACE] PROCEDURE
+procedure_name
+([parameters_list])
+IS
+ local declarations
+BEGIN
+ commands ("commit;" before "END;"
+END;
+
+--
+
+FUNCTION
+
+CREATE [OR REPLACE] FUNCTION
+function_name
+([parameters_list])
+RETURN return_type
+IS
+ local declarations
+BEGIN
+ commands
+END;
+
+--
+
+TRIGGERS
+
+
