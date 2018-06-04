@@ -1,8 +1,22 @@
+The foreign key is defined in a second table, but it refers to the primary key or a unique key in the first table
+ 
 Exercício 1: No script de criação da base de dados, os DROP TABLE devem ser executados na ORDEM INVERSA de criação das tabelas. 
 Por que?
 
 Porque não é permitido fazer o drop de uma tabela referenciada por outras tabelas, e uma tabela apenas pode ser referenciada por
 tabelas criadas após ela na sequência do código.
+
+Exercício 2: 
+(a) Para que serve adicionar ON DELETE CASCADE na CONSTRAINT de chave estrangeira?
+
+Se uma linha da tabela referenciada pela chave estrangeira for deletada, as linhas correspondentes na tabela que contém a chave estrangeira também serão deletadas.
+
+(b) Para que serve adicionar ON DELETE SET NULL na CONSTRAINT de chave estrangeira?
+
+Se uma linha da tabela referenciada pela chave estrangeira for deletada, as linhas correspondentes na tabela que contém a chave estrangeira terão seus atributos da chave estrangeira mudados para NULL.
+
+Exercício 3: Faça engenharia reversa das tabelas acima gerando o DER das mesmas.
+
 
 
 
