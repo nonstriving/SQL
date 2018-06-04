@@ -1,0 +1,3 @@
+-- A virtual table that doesn't store data
+-- Consists of a view of a set of columns from one or more tables in the database
+-- 
