@@ -101,6 +101,37 @@ DROP PROCEDURE atualizaapelido;
 
 --
 
+-- funções
+-- Podem receber apenas parâmetros de entrada e devolvem um valor em seu nome.
+
+CREATE OR REPLACE FUNCTION CONTAHABILIDADES
+  (CPFI IN NUMBER)
+  RETURN INTEGER
+  IS 
+    SOMA INTEGER;
+  BEGIN
+    SELECT COUNT(HABILIDADE) INTO SOMA -- cursor?
+    FROM PESSOAHABILIDADE
+    WHERE CPF = CPFI
+  RETURN SOMA
+  END;
+  
+  SELECT CONTAHABILIDADES(1111)
+  FROM DUAL;
+  
+  -- Oracle's SQL syntax requires the FROM clause but some queries don't require 
+  -- any tables - DUAL can be readily used in these cases.
+  
+  --
+  
+  
+  
+  
+  
+  
+  
+  
+
 
  
  
