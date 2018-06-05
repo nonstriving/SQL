@@ -20,7 +20,11 @@ Exercício 4: Os INSERTS são feito na ORDEM de criação. Por que?
 
 Porque ao inserir uma nova linha em uma tabela, é necessário que as linhas referenciadas por chaves estrangeiras em outras tabelas já existam. Como tabelas com chaves estrangeiras que referenciam outras tabelas apenas podem ser criadas após a criação das tabelas referenciadas, basta que os inserts sigam a ordem de criação das tabelas.
 
+Exercício 5. O Oracle não possui um tipo de dado "auto-incremento" como podemos ver em alguns outros bancos de dados. Nesse sentido, para que serve o comando CREATE SEQUENCE?
 
+O comando CREATE SEQUENCE cria uma sequência em um intervalo definido pelo usuário que é incrementada automaticamente pelo Oracle a cada nova chamada da sequência.
+
+Quando é necessário utilizar valores numéricos seqüenciais em uma tabela faz-se o uso de sequence. Esses valores são gerados automaticamente pelo oracle.
 
 
 
