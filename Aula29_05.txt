@@ -1,7 +1,6 @@
 The foreign key is defined in a second table, but it refers to the primary key or a unique key in the first table
  
-Exercício 1: No script de criação da base de dados, os DROP TABLE devem ser executados na ORDEM INVERSA de criação das tabelas. 
-Por que?
+Exercício 1: No script de criação da base de dados, os DROP TABLE devem ser executados na ORDEM INVERSA de criação das tabelas. Por que?
 
 Porque não é permitido fazer o drop de uma tabela referenciada por outras tabelas, e uma tabela apenas pode ser referenciada por
 tabelas criadas após ela na sequência do código.
@@ -16,6 +15,16 @@ Se uma linha da tabela referenciada pela chave estrangeira for deletada, as linh
 Se uma linha da tabela referenciada pela chave estrangeira for deletada, as linhas correspondentes na tabela que contém a chave estrangeira terão seus atributos da chave estrangeira mudados para NULL.
 
 Exercício 3: Faça engenharia reversa das tabelas acima gerando o DER das mesmas.
+
+Exercício 4: Os INSERTS são feito na ORDEM de criação. Por que?
+
+Porque ao inserir uma nova linha em uma tabela, é necessário que as linhas referenciadas por chaves estrangeiras em outras tabelas já existam. Como tabelas com chaves estrangeiras que referenciam outras tabelas apenas podem ser criadas após a criação das tabelas referenciadas, basta que os inserts sigam a ordem de criação das tabelas.
+
+
+
+
+
+
 
 
 
